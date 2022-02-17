@@ -11,10 +11,10 @@ RUN apt-get -y update && apt-get -y upgrade && \
         autoconf libtool libcurl4-openssl-dev qt5-default \
         libsodium-dev libssl-dev libcrypto++-dev libc-ares-dev \
         libsqlite3-dev libfreeimage-dev swig libboost-all-dev \
-        libpthread-stubs0-dev zlib1g-dev
+        libpthread-stubs0-dev zlib1g-dev \
 
 # Installing Mega SDK Python Binding
-RUN curl -fsSL https://github.com/jaskaranSM/megasdkrest/releases/download/v0.1/megasdkrest -o /usr/local/bin/megasdkrest \
+&& curl -fsSL https://github.com/jaskaranSM/megasdkrest/releases/download/v0.1/megasdkrest -o /usr/local/bin/megasdkrest \
 && chmod +x /usr/local/bin/megasdkrest
 
 # Requirements Mirror Bot
