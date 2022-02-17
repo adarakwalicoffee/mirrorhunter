@@ -19,7 +19,7 @@ RUN apt-get -y update && apt-get -y upgrade && \
 
 # Requirements Mirror Bot
 COPY requirements.txt .
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 RUN apt-get -y update && apt-get -y upgrade && apt-get -y autoremove && apt-get -y autoclean
 
