@@ -14,8 +14,8 @@ RUN apt-get -y update && apt-get -y upgrade && \
         libpthread-stubs0-dev zlib1g-dev
 
 # Installing Mega SDK Python Binding
- && curl -fsSL https://github.com/jaskaranSM/megasdkrest/releases/download/v0.1/megasdkrest -o /usr/local/bin/megasdkrest \
-    && chmod +x /usr/local/bin/megasdkrest
+RUN curl -fsSL https://github.com/jaskaranSM/megasdkrest/releases/download/v0.1/megasdkrest -o /usr/local/bin/megasdkrest \
+&& chmod +x /usr/local/bin/megasdkrest
 
 # Requirements Mirror Bot
 COPY requirements.txt .
